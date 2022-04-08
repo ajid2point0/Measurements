@@ -11,7 +11,7 @@ import SwiftUI
 struct MeasurementsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(presenter: Presenter())
         }
     }
 }
