@@ -19,5 +19,6 @@ struct MeasurementRow: View {
 struct MeasurementRow_Previews: PreviewProvider {
     static var previews: some View {
         MeasurementRow(greeting: "Hello, World!")
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -7,27 +7,11 @@
 
 import SwiftUI
 
-protocol Presentable {
-    func presentGreetings() -> [Measurement]
-}
-
-struct Presenter: Presentable {
-    func presentGreetings() -> [Measurement] {
-        [
-            Measurement(name: "Hi, Frank"),
-            Measurement(name: "Hi, Mike"),
-            Measurement(name: "Hi, Joe")
-        ]
-    }
-}
-
 struct ContentView: View {
-    
-    let presenter: Presentable
-    
+    let presenter: Presenter
     var body: some View {
         NavigationView{
-            List(presenter.presentGreetings()) {
+            List(presenter.presentee) {
                 MeasurementRow(greeting: $0.name)
             }
             .navigationTitle("Measurement")
@@ -37,6 +21,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(presenter: Presenter())
+        ContentView(
+            presenter: Presenter(
+                presentee: [
+                    Measurement(name: "Hi, Mike")
+                ]
+            )
+        )
     }
 }

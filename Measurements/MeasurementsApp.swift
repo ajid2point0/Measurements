@@ -11,7 +11,13 @@ import SwiftUI
 struct MeasurementsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(presenter: Presenter())
+            ContentView(
+                presenter: Presenter(
+                    presentee: [
+                        Measurement(name: "Hi, Frank")
+                    ]
+                )
+            )
         }
     }
 }
