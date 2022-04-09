@@ -10,6 +10,6 @@ protocol Presentable {
 }
 
 struct Presenter: Presentable {
-    typealias Presentee = [Measurement]
+    typealias Presentee = [MeasurementObject]
     let presentee: Presentee
 }

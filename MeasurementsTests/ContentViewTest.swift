@@ -20,10 +20,10 @@ class ContentViewTest: XCTestCase {
     override func setUp() {
         super.setUp()
         let presenter = Presenter(presentee: [
-            Measurement(name: "Hi, Jack"),
-            Measurement(name: "Hi, Joe"),
-            Measurement(name: "Hi, Sam"),
-            Measurement(name: "Hi, Oliver")
+            MeasurementObject(name: "Hi, Jack"),
+            MeasurementObject(name: "Hi, Joe"),
+            MeasurementObject(name: "Hi, Sam"),
+            MeasurementObject(name: "Hi, Oliver")
         ])
         sut = ContentView(presenter: presenter)
     }

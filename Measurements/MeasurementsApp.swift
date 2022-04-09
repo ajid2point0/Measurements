@@ -14,7 +14,7 @@ struct MeasurementsApp: App {
             ContentView(
                 presenter: Presenter(
                     presentee: [
-                        Measurement(name: "Hi, Frank")
+                        MeasurementObject(name: "Hi, Frank")
                     ]
                 )
             )

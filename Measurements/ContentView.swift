@@ -24,7 +24,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView(
             presenter: Presenter(
                 presentee: [
-                    Measurement(name: "Hi, Mike")
+                    MeasurementObject(name: "Hi, Mike")
                 ]
             )
         )
