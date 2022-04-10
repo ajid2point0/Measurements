@@ -9,12 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     let presenter: Presenter
+    let network = Networking()
     var body: some View {
-        NavigationView{
-            List(presenter.presentee) {
-                MeasurementRow(greeting: $0.name)
-            }
-            .navigationTitle("Measurement")
+        List(presenter.presentee) {
+            MeasurementRow(greeting: $0.name)
         }
     }
 }
