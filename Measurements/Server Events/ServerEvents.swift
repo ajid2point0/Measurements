@@ -31,14 +31,14 @@ public class ServerEvents : Publisher {
     var url : URL
     var headers = [String: String]()
     var payload : Data?
-    var method : EventSource.Method = .get
+    var method : Method = .get
     var contentType = "application/json"
     
     public var subject = PassthroughSubject<Output, Failure>()
     
     public init(url: URL, headers: [String:String]? = nil,
          payload: Data?,
-         method: EventSource.Method,
+         method: Method,
          authKey: String? = nil) {
 
         Swift.print("SSE Init")

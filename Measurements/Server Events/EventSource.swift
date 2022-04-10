@@ -11,12 +11,6 @@ import Foundation
 
 open class EventSource: NSObject, EventSourceProtocol, URLSessionDataDelegate {
     
-    public enum Method : String {
-        case post = "POST"
-        case get = "GET"
-    }
-    
-    
     static let DefaultRetryTime = 3000
 
     public let url: URL

@@ -9,20 +9,12 @@ import Foundation
 import Combine
 
 class Networking {
-    private var url: URL? {
-        var components = URLComponents()
-        components.scheme = "http"
-        components.host = "wsdemo.envdev.io"
-        components.path = "/sse"
-        components.port = 80
-        return components.url
-    }
     var serverEvents: ServerEvents?
     var cancelables = Set<AnyCancellable>()
-    
     init() {
-        guard let serverURL = url else {return}
-        serverEvents = ServerEvents(url: serverURL, payload: nil, method: .get)
+        let endpoint = Endpoint.DemoSSE
+        guard let serverURL = URL.from(endpoint) else {return}
+        serverEvents = ServerEvents(url: serverURL, headers: endpoint.headers, payload: nil, method: .get)
         serverEvents?.sink(
             receiveCompletion: { completion in
                 switch completion {
