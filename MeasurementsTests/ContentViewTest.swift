@@ -19,13 +19,7 @@ class ContentViewTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let presenter = Presenter(presentee: [
-            MeasurementObject(name: "Hi, Jack"),
-            MeasurementObject(name: "Hi, Joe"),
-            MeasurementObject(name: "Hi, Sam"),
-            MeasurementObject(name: "Hi, Oliver")
-        ])
-        sut = ContentView(presenter: presenter)
+        sut = ContentView()
     }
     
     override func tearDown() {

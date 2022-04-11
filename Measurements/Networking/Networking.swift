@@ -8,12 +8,13 @@
 import Foundation
 import Combine
 
-class Networking {
+protocol NetworkingProtocol {
+    func getEvents() -> AnyPublisher<[MeasurementObject], Error>?
+}
+
+class Networking: NetworkingProtocol {
     
     private var serverEvents: ServerEvents?
-    private var cancelables = Set<AnyCancellable>()
-    
-    init() { getEvents() }
     
     private var endPoint: Endpoint {
         Endpoint.DemoSSE
@@ -23,25 +24,12 @@ class Networking {
         URL.from(endPoint)
     }
     
-    private func getEvents() {
-        guard let serverURL = url else {return}
+    func getEvents() -> AnyPublisher<[MeasurementObject], Error>? {
+        guard let serverURL = url else {return nil}
         serverEvents = ServerEvents(url: serverURL, headers: endPoint.headers, payload: nil, method: .get)
-        
-        serverEvents?
+        return serverEvents?
             .compactMap { $0.data(using: .utf8) }
             .decode(type: [MeasurementObject].self, decoder: JSONDecoder())
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished: print("Finished")
-                case .failure(let error): print(error)
-                }
-            }, receiveValue: { measurements in
-                print(measurements)
-            })
-            .store(in: &cancelables)
-    }
-    
-    deinit {
-        cancelables.removeAll()
+            .eraseToAnyPublisher()
     }
 }

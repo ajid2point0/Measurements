@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    let presenter: Presenter
-    let network = Networking()
+    @EnvironmentObject var presenter: Presenter
     var body: some View {
-        List(presenter.presentee) {
+        List(presenter.measurementList) {
             MeasurementRow(greeting: $0.name)
         }
     }
@@ -19,12 +18,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
-            presenter: Presenter(
-                presentee: [
-                    MeasurementObject(name: "Hi, Mike")
-                ]
-            )
-        )
+        ContentView()
+            .environmentObject(Presenter(networking: Networking()))
     }
 }

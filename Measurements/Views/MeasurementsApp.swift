@@ -9,15 +9,13 @@ import SwiftUI
 
 @main
 struct MeasurementsApp: App {
+    
+    @StateObject var presenter = Presenter(networking: Networking())
+    
     var body: some Scene {
         WindowGroup {
-            ContentView(
-                presenter: Presenter(
-                    presentee: [
-                        MeasurementObject(name: "Hi, Frank")
-                    ]
-                )
-            )
+            ContentView()
+                .environmentObject(presenter)
         }
     }
 }

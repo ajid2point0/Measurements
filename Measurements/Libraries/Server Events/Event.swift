@@ -86,7 +86,6 @@ private extension Event {
         let scanner = Scanner(string: line)
         scanner.scanUpTo(":", into: &key)
         scanner.scanString(":", into: nil)
-
         for newline in newLineCharacters {
             if scanner.scanUpTo(newline, into: &value) {
                 break
