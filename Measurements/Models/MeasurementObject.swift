@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct MeasurementObject: Identifiable, Codable {
-    let id, name, unit: String
-    let measurement: Measurement
+struct MeasurementObject: Identifiable, Decodable {
+    let id, name: String
+    let unit: String?
+    let measurements: [Measurement]
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case name, unit, measurements
+    }
 }
 extension MeasurementObject {
     init(name: String) {
@@ -17,7 +23,14 @@ extension MeasurementObject {
             id: UUID().uuidString,
             name: name,
             unit: "m",
-            measurement: Measurement()
+            measurements: [Measurement]()
         )
+    }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        unit = try container.decodeIfPresent(String.self, forKey: .unit)
+        measurements = try container.decode([Measurement].self, forKey: .measurements)
     }
 }
