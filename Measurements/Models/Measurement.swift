@@ -7,36 +7,47 @@
 
 import Foundation
 
-struct Measurement: Decodable {
-    
+struct Coordinate: Decodable {
+    let latitude: Double
+    let longitude: Double
+}
+
+struct Measurement: Decodable, Identifiable {
+    let id: String
     let timeStamp: Int
     let value: MeasurementValue
     
-    enum MeasurementValue: Codable {
-        case StringValue(String)
-        case DoubleValue(Double)
-        case ListValue([Double])
+    enum MeasurementValue: Decodable {
+        case SingleValue(String)
+        case Tuple(Double, Double)
     }
 }
 extension Measurement {
-    init() {
-        self.init(
-            timeStamp: 12345678,
-            value: .StringValue("MeasurementValue")
-        )
+    
+    init(timeStamp: Int, value: MeasurementValue) {
+        self.timeStamp = timeStamp
+        self.value = value
+        self.id = String(timeStamp)
     }
     
     init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         timeStamp = try container.decode(Int.self)
+        id = String(timeStamp)
         do {
-            value = try .StringValue(container.decode(String.self))
+            value = try .SingleValue(container.decode(String.self))
         } catch {
             do {
-                value = try .DoubleValue(container.decode(Double.self))
+                let doubleValue = try container.decode(Double.self)
+                value = .SingleValue(String(doubleValue))
             } catch {
                 do {
-                    value = try .ListValue(container.decode([Double].self))
+                    let array = try container.decode([Double].self)
+                    if array.count >= 2 {
+                        value = .Tuple(array[0], array[1])
+                    } else {
+                        throw DecodingError.typeMismatch(MeasurementValue.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Couldn't convert array into tuple"))
+                    }
                 } catch {
                     throw DecodingError.typeMismatch(Measurement.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Encoded payload conflicts with expected type"))
                 }

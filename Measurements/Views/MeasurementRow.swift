@@ -9,16 +9,33 @@ import SwiftUI
 
 struct MeasurementRow: View {
     
-    let greeting: String
+    let measurement: MeasurementObject
     
     var body: some View {
-        Text(greeting)
+        VStack {
+            Text(measurement.id)
+            Text(measurement.name)
+            ForEach(measurement.measurements, id: \.id) { measurementValue in
+                HStack {
+                    Text("TimeStamp: \(measurementValue.timeStamp)")
+                    if case let .SingleValue(value) = measurementValue.value {
+                        Text("measurement: \(value)")
+                    }
+                    if case let .Tuple(longitude, latitude) = measurementValue.value {
+                        Text("\(longitude) , \(latitude)")
+                    }
+                    if let unit = measurement.unit {
+                        Text(unit)
+                    }
+                }
+            }
+        }
     }
 }
 
 struct MeasurementRow_Previews: PreviewProvider {
     static var previews: some View {
-        MeasurementRow(greeting: "Hello, World!")
+        MeasurementRow(measurement: MeasurementObject(name: "measurement1"))
             .previewLayout(.sizeThatFits)
     }
 }

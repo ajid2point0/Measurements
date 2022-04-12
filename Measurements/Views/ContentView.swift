@@ -14,8 +14,9 @@ struct ContentView: View {
     
     var body: some View {
         List(presenter.measurementList) {
-            MeasurementRow(greeting: $0.name)
+            MeasurementRow(measurement: $0)
         }
+        .animation(.easeInOut)
         .onReceive(inspection.notice) { self.inspection.visit(self, $0) }
     }
 }
