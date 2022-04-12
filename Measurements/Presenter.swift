@@ -33,9 +33,8 @@ class Presenter: ObservableObject {
     
     private func updateItemList(with values: [MeasurementObject]) {
         linkedList.prepend(contentOf: values)
-        linkedList.removeAll(until: 6)
-        let items = linkedList.items()
-        self.measurementList = items
+        linkedList.removeAll(until: 100)
+        self.measurementList = linkedList.items()
     }
     
     deinit {
