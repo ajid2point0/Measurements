@@ -13,6 +13,8 @@ public enum Method : String {
 }
 
 protocol EndPointProtocol {
+    
+    // Example: "https"
     var scheme: String { get }
     
     var host: String { get }
@@ -23,6 +25,7 @@ protocol EndPointProtocol {
     
     var headers: [String: String]? { get }
     
+    // Example: .get
     var method: Method { get }
 }
 

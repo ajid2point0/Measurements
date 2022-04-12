@@ -9,9 +9,8 @@ import Combine
 
 class Presenter: ObservableObject {
     
-    private var linkedList = DoublyLinkedList<MeasurementObject>()
-    
     private var cancelables = Set<AnyCancellable>()
+    
     @Published var measurementList: [MeasurementObject] = []
     private var networking: NetworkingProtocol
     
@@ -31,10 +30,9 @@ class Presenter: ObservableObject {
         }).store(in: &cancelables)
     }
     
+    
     private func updateItemList(with values: [MeasurementObject]) {
-        linkedList.prepend(contentOf: values)
-        linkedList.removeAll(until: 100)
-        self.measurementList = linkedList.items()
+        self.measurementList.insert(contentsOf: values, at: 0)
     }
     
     deinit {

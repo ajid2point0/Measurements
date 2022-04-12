@@ -17,6 +17,7 @@ struct Measurement: Decodable, Identifiable {
     let timeStamp: Int
     let value: MeasurementValue
     
+    // measurement are either single(String, float) or tuple(location)
     enum MeasurementValue: Decodable {
         case SingleValue(String)
         case Tuple(Double, Double)

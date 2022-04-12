@@ -9,33 +9,57 @@ import SwiftUI
 
 struct MeasurementRow: View {
     
-    let measurement: MeasurementObject
+    let measurementValue: Measurement
+    let unit: String?
     
     var body: some View {
-        VStack {
-            Text(measurement.id)
-            Text(measurement.name)
-            ForEach(measurement.measurements, id: \.id) { measurementValue in
-                HStack {
-                    Text("TimeStamp: \(measurementValue.timeStamp)")
-                    if case let .SingleValue(value) = measurementValue.value {
-                        Text("measurement: \(value)")
-                    }
-                    if case let .Tuple(longitude, latitude) = measurementValue.value {
-                        Text("\(longitude) , \(latitude)")
-                    }
-                    if let unit = measurement.unit {
-                        Text(unit)
-                    }
+        VStack(alignment: .leading, spacing: 10) {
+            Text("TimeStamp: \(measurementValue.timeStamp)")
+            HStack {
+                let unitValue = unit ?? ""
+                if case let .SingleValue(value) = measurementValue.value {
+                    Text("Measurement: \(value) \(unitValue)")
+                        .lineLimit(2)
+                }
+                if case let .Tuple(longitude, latitude) = measurementValue.value {
+                    Text("Coordiantes: (\(longitude) , \(latitude))")
+                        .lineLimit(2)
                 }
             }
         }
+        .padding()
+        .background(Color.mint)
+        .cornerRadius(5)
     }
 }
 
 struct MeasurementRow_Previews: PreviewProvider {
     static var previews: some View {
-        MeasurementRow(measurement: MeasurementObject(name: "measurement1"))
+        MeasurementRow(measurementValue: Measurement(timeStamp: 1234567, value: .SingleValue("measurement1")), unit: "m")
+            .previewLayout(.sizeThatFits)
+    }
+}
+
+
+
+struct MeasurementsRow: View {
+    
+    let measurement: MeasurementObject
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("name: \(measurement.name)")
+            ForEach(measurement.measurements, id: \.id) { measurementValue in
+                MeasurementRow(measurementValue: measurementValue, unit: measurement.unit)
+            }
+        }
+        .padding([.top, .bottom])
+    }
+}
+
+struct MeasurementsRow_Previews: PreviewProvider {
+    static var previews: some View {
+        MeasurementsRow(measurement: MeasurementObject(name: "measurement1"))
             .previewLayout(.sizeThatFits)
     }
 }

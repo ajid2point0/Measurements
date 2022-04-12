@@ -13,11 +13,17 @@ struct ContentView: View {
     internal let inspection = Inspection<Self>()
     
     var body: some View {
-        List(presenter.measurementList) {
-            MeasurementRow(measurement: $0)
+        NavigationView {
+            List(presenter.measurementList) {
+                MeasurementsRow(measurement: $0)
+            }
+            .listStyle(.plain)
+            .navigationTitle("MEASUREMENTS")
+            .navigationBarTitleDisplayMode(.inline)
+            .animation(.easeInOut, value: presenter.measurementList)
+            .onReceive(inspection.notice) { self.inspection.visit(self, $0) }
         }
-        .animation(.easeInOut)
-        .onReceive(inspection.notice) { self.inspection.visit(self, $0) }
+        .navigationViewStyle(.stack)
     }
 }
 

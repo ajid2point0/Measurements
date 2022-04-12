@@ -10,8 +10,6 @@
 		80107A4C28037CA70085DE65 /* MeasurementObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A4B28037CA70085DE65 /* MeasurementObject.swift */; };
 		80107A50280384750085DE65 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A4F280384750085DE65 /* Extensions.swift */; };
 		80107A522803849B0085DE65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A512803849B0085DE65 /* Endpoint.swift */; };
-		80126BBF280466F800EA81B9 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80126BBE280466F800EA81B9 /* Node.swift */; };
-		80126BC12804672200EA81B9 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80126BC02804672200EA81B9 /* DoublyLinkedList.swift */; };
 		8019A8BA28034E520062660C /* EventStreamParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019A8B528034E520062660C /* EventStreamParser.swift */; };
 		8019A8BB28034E520062660C /* ServerEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019A8B628034E520062660C /* ServerEvents.swift */; };
 		8019A8BC28034E520062660C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019A8B728034E520062660C /* Event.swift */; };
@@ -20,7 +18,6 @@
 		8019A8C2280356920062660C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8019A8C1280356920062660C /* Networking.swift */; };
 		8042F5872801A79F00FF8617 /* MeasurementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042F5862801A79F00FF8617 /* MeasurementsApp.swift */; };
 		8042F58928022CC600FF8617 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8042F58828022CC600FF8617 /* Presenter.swift */; };
-		80553799280484B6009BB04C /* DoublyLinkedListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80553798280484B6009BB04C /* DoublyLinkedListTest.swift */; };
 		8055379C28049E29009BB04C /* NetworkingMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8055379B28049E29009BB04C /* NetworkingMock.swift */; };
 		805537A1280544E3009BB04C /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805537A0280544E3009BB04C /* Inspection.swift */; };
 		807D91B1280034F8003A7458 /* MeasurementsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D91B0280034F8003A7458 /* MeasurementsApp.swift */; };
@@ -47,8 +44,6 @@
 		80107A4B28037CA70085DE65 /* MeasurementObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementObject.swift; sourceTree = "<group>"; };
 		80107A4F280384750085DE65 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		80107A512803849B0085DE65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		80126BBE280466F800EA81B9 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		80126BC02804672200EA81B9 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		8019A8B528034E520062660C /* EventStreamParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStreamParser.swift; sourceTree = "<group>"; };
 		8019A8B628034E520062660C /* ServerEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerEvents.swift; sourceTree = "<group>"; };
 		8019A8B728034E520062660C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -58,7 +53,6 @@
 		8019A8C1280356920062660C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		8042F5862801A79F00FF8617 /* MeasurementsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsApp.swift; sourceTree = "<group>"; };
 		8042F58828022CC600FF8617 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		80553798280484B6009BB04C /* DoublyLinkedListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListTest.swift; sourceTree = "<group>"; };
 		8055379B28049E29009BB04C /* NetworkingMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingMock.swift; sourceTree = "<group>"; };
 		805537A0280544E3009BB04C /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		807D91AD280034F8003A7458 /* Measurements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Measurements.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,19 +117,9 @@
 			isa = PBXGroup;
 			children = (
 				8019A8BF28034E680062660C /* Server Events */,
-				80126BC22804673400EA81B9 /* DoublyLinkedList */,
 				805537A0280544E3009BB04C /* Inspection.swift */,
 			);
 			path = Libraries;
-			sourceTree = "<group>";
-		};
-		80126BC22804673400EA81B9 /* DoublyLinkedList */ = {
-			isa = PBXGroup;
-			children = (
-				80126BBE280466F800EA81B9 /* Node.swift */,
-				80126BC02804672200EA81B9 /* DoublyLinkedList.swift */,
-			);
-			path = DoublyLinkedList;
 			sourceTree = "<group>";
 		};
 		8019A8BF28034E680062660C /* Server Events */ = {
@@ -206,7 +190,6 @@
 				8055379A28049E0B009BB04C /* Mocks */,
 				8042F5862801A79F00FF8617 /* MeasurementsApp.swift */,
 				807D91DE280074BC003A7458 /* ContentViewTest.swift */,
-				80553798280484B6009BB04C /* DoublyLinkedListTest.swift */,
 			);
 			path = MeasurementsTests;
 			sourceTree = "<group>";
@@ -321,11 +304,9 @@
 				80107A522803849B0085DE65 /* Endpoint.swift in Sources */,
 				8019A8BC28034E520062660C /* Event.swift in Sources */,
 				8019A8C2280356920062660C /* Networking.swift in Sources */,
-				80126BC12804672200EA81B9 /* DoublyLinkedList.swift in Sources */,
 				8019A8BB28034E520062660C /* ServerEvents.swift in Sources */,
 				80107A4C28037CA70085DE65 /* MeasurementObject.swift in Sources */,
 				807D91B3280034F8003A7458 /* ContentView.swift in Sources */,
-				80126BBF280466F800EA81B9 /* Node.swift in Sources */,
 				807D91DB280053AE003A7458 /* MeasurementRow.swift in Sources */,
 				807D91DD280055AB003A7458 /* Measurement.swift in Sources */,
 				8019A8BE28034E520062660C /* EventSource.swift in Sources */,
@@ -342,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80553799280484B6009BB04C /* DoublyLinkedListTest.swift in Sources */,
 				8055379C28049E29009BB04C /* NetworkingMock.swift in Sources */,
 				8042F5872801A79F00FF8617 /* MeasurementsApp.swift in Sources */,
 				807D91DF280074BC003A7458 /* ContentViewTest.swift in Sources */,
