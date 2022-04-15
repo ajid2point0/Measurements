@@ -21,7 +21,7 @@ extension MeasurementObject {
             id: UUID().uuidString,
             identifier: UUID().uuidString,
             name: name,
-            unit: "m",
+            unit: nil,
             measurements: [Measurement]()
         )
     }

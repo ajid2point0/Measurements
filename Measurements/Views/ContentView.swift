@@ -20,7 +20,7 @@ struct ContentView: View {
             .listStyle(.plain)
             .navigationTitle("MEASUREMENTS")
             .navigationBarTitleDisplayMode(.inline)
-            .animation(.easeInOut, value: presenter.measurementList)
+            .animation(.easeInOut(duration: 1), value: presenter.measurementList)
             .onReceive(inspection.notice) { self.inspection.visit(self, $0) }
         }
         .navigationViewStyle(.stack)

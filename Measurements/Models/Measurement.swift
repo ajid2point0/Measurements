@@ -17,6 +17,11 @@ struct Measurement: Decodable, Identifiable {
     let timeStamp: Int
     let value: MeasurementValue
     
+    var time: Date {
+        let timeInterval = Double(timeStamp)
+        return Date(timeIntervalSince1970: timeInterval)
+    }
+    
     // measurement are either single(String, float) or tuple(location)
     enum MeasurementValue: Decodable {
         case SingleValue(String)

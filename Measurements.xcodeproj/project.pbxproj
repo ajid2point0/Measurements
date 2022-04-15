@@ -28,6 +28,7 @@
 		807D91DD280055AB003A7458 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D91DC280055AB003A7458 /* Measurement.swift */; };
 		807D91DF280074BC003A7458 /* ContentViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D91DE280074BC003A7458 /* ContentViewTest.swift */; };
 		807D91E22800D6EB003A7458 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 807D91E12800D6EB003A7458 /* ViewInspector */; };
+		80A1798F2806BC9300F6B935 /* MeasurementsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A1798E2806BC9200F6B935 /* MeasurementsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		807D91DA280053AE003A7458 /* MeasurementRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementRow.swift; sourceTree = "<group>"; };
 		807D91DC280055AB003A7458 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 		807D91DE280074BC003A7458 /* ContentViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTest.swift; sourceTree = "<group>"; };
+		80A1798E2806BC9200F6B935 /* MeasurementsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				807D91B0280034F8003A7458 /* MeasurementsApp.swift */,
 				807D91B2280034F8003A7458 /* ContentView.swift */,
 				807D91DA280053AE003A7458 /* MeasurementRow.swift */,
+				80A1798E2806BC9200F6B935 /* MeasurementsRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80107A522803849B0085DE65 /* Endpoint.swift in Sources */,
+				80A1798F2806BC9300F6B935 /* MeasurementsRow.swift in Sources */,
 				8019A8BC28034E520062660C /* Event.swift in Sources */,
 				8019A8C2280356920062660C /* Networking.swift in Sources */,
 				8019A8BB28034E520062660C /* ServerEvents.swift in Sources */,
