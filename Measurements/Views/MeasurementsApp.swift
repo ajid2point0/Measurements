@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct MeasurementsApp: App {
     
-    @StateObject var presenter = Presenter(networking: Networking())
+    @StateObject var presenter = Presenter(dataFactory: APIDataFactory())
     
     var body: some Scene {
         WindowGroup {

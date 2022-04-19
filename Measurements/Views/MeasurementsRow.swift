@@ -24,7 +24,14 @@ struct MeasurementsRow: View {
 
 struct MeasurementsRow_Previews: PreviewProvider {
     static var previews: some View {
-        MeasurementsRow(measurement: MeasurementObject(name: "measurement1"))
-            .previewLayout(.sizeThatFits)
+        MeasurementsRow(measurement:
+                            MeasurementObject(
+                                identifier: "identifier",
+                                name: "name",
+                                unit: "unit",
+                                measurements: []
+                            )
+        )
+        .previewLayout(.sizeThatFits)
     }
 }
