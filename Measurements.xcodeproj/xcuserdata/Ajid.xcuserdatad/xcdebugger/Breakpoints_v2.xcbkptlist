@@ -7,7 +7,196 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CC0E659B-EDBD-4236-8DD7-74313EBA4732"
+            uuid = "D6638A47-B517-43CD-873D-49C251279223"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeasurementsTests/PresenterTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "PresenterTest"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D6638A47-B517-43CD-873D-49C251279223 - 14fc9e182ce24eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Never&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "230">
+               </Location>
+               <Location
+                  uuid = "D6638A47-B517-43CD-873D-49C251279223 - 14fc9e182ce24eb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Never&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "D6638A47-B517-43CD-873D-49C251279223 - 14fc9e182ce24eff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Never&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3345952B-A154-4977-BF90-DD8D176AD3E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeasurementsTests/PresenterTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "PresenterTest"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3345952B-A154-4977-BF90-DD8D176AD3E6 - 12b6eff63153e66e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Measurements.MeasurementObject&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "3345952B-A154-4977-BF90-DD8D176AD3E6 - 14fc9e182ce24e58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Never&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "3345952B-A154-4977-BF90-DD8D176AD3E6 - 14fc9e182ce24e9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;Swift.Never&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "228">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E7F35B5-FA59-4D75-B587-43DB59B84EED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MeasurementsTests/PresenterTest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "PresenterTest"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "8E7F35B5-FA59-4D75-B587-43DB59B84EED - d2f21aa8a55ec4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "636">
+               </Location>
+               <Location
+                  uuid = "8E7F35B5-FA59-4D75-B587-43DB59B84EED - 12b6eff63153e603"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Measurements.MeasurementObject&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "95">
+               </Location>
+               <Location
+                  uuid = "8E7F35B5-FA59-4D75-B587-43DB59B84EED - 12b6eff63153e64d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;Measurements.MeasurementObject&gt;) -&gt; () in MeasurementsTests.PresenterTest.test_measurementsListCount_withLocalData_shouldReturn1() throws -&gt; ()"
+                  moduleName = "MeasurementsTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Ajid/Documents/GitHub/Measurements/MeasurementsTests/PresenterTest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "95">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CDC2B33A-868A-4D97-AB9E-ABC4AB52FEDB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"

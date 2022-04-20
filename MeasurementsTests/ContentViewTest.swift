@@ -12,7 +12,7 @@ import SwiftUI
 
 extension ContentView: Inspectable {}
 
-extension MeasurementRow: Inspectable {}
+extension MeasurementsRow: Inspectable {}
 
 extension Inspection: InspectionEmissary { }
 
@@ -22,7 +22,7 @@ class ContentViewTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        let presenter = Presenter(networking: NetworkingMock())
+        let presenter = Presenter(dataFactory: LocalDataFactory())
         sut = ContentView()
         ViewHosting.host(view: sut.environmentObject(presenter))
     }
@@ -43,40 +43,44 @@ class ContentViewTest: XCTestCase {
     }
     
     func test_List_hasMeasurementsRow() throws {
-        
-        let exp = sut.inspection.inspect { view in
-            let list = try view.find(ViewType.List.self)
+        // TODO: remove GCD call
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let exp = self.sut.inspection.inspect { view in
+                let list = try view.find(ViewType.List.self)
+                
+                XCTAssertFalse(try list.find(MeasurementsRow.self).isAbsent, "MeasurementRow should exist")
+            }
             
-            XCTAssertFalse(try list.find(MeasurementRow.self).isAbsent, "MeasurementRow should exist")
+            self.wait(for: [exp], timeout: 0.1)
         }
-        
-        wait(for: [exp], timeout: 0.1)
-        
     }
 
-    func test_List_rowsNumber_shouldReturnFour() throws {
-        
-        let exp = sut.inspection.inspect { view in
-            let list = try view.find(ViewType.List.self)
-            let views = list.findAll(MeasurementRow.self)
+    func test_List_rowsNumber_shouldReturn1() throws {
+        // TODO: remove GCD call
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let exp = self.sut.inspection.inspect { view in
+                let list = try view.find(ViewType.List.self)
+                let views = list.findAll(MeasurementsRow.self)
+                
+                XCTAssertEqual(views.count, 1, "number of Measurements rows in list")
+            }
             
-            XCTAssertEqual(views.count, 4, "number of Measurements rows in list")
+            self.wait(for: [exp], timeout: 0.1)
         }
-        
-        wait(for: [exp], timeout: 0.1)
-        
     }
 
-    func test_listFirstRowText_shouldGreetJack() throws {
-        
-        let exp = sut.inspection.inspect { view in
-            let list = try view.find(ViewType.List.self)
-            let row = try list.find(MeasurementRow.self)
+    func test_listFirstRowName_shouldBePressure() throws {
+        // TODO: remove GCD call
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            let exp = self.sut.inspection.inspect { view in
+                let list = try view.find(ViewType.List.self)
+                let row = try list.find(MeasurementsRow.self)
+                
+                XCTAssertEqual(try row.text().string(), "Pressure")
+            }
             
-            XCTAssertEqual(try row.text().string(), "measurement4")
+            self.wait(for: [exp], timeout: 0.1)
         }
-        
-        wait(for: [exp], timeout: 0.1)
         
     }
 }
