@@ -11,7 +11,7 @@ import Combine
 
 struct LocalDataFactory: DataFactory {
     
-    func getData(endPoint: Endpoint) -> AnyPublisher<Data, Error> {
+    func getData(endPoint: EndPoint) -> AnyPublisher<Data, Error> {
         LocalDataProvider(.DemoSSE).eraseToAnyPublisher()
     }
     

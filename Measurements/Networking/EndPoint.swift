@@ -29,11 +29,11 @@ protocol EndPointProtocol {
     var method: Method { get }
 }
 
-enum Endpoint {
+enum EndPoint {
     case DemoSSE
 }
 
-extension Endpoint: EndPointProtocol {
+extension EndPoint: EndPointProtocol {
     
     var scheme: String { "http"}
     

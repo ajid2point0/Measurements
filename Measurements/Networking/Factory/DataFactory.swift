@@ -10,5 +10,5 @@ import Combine
 
 protocol DataFactory {
     
-    func getData(endPoint: Endpoint) -> AnyPublisher<Data, Error>
+    func getData(endPoint: EndPoint) -> AnyPublisher<Data, Error>
 }

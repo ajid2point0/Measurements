@@ -13,14 +13,17 @@ struct LocalDataProvider: DataProvider {
     
     private var subject = PassthroughSubject<Data, Error>()
     
-    init(_ endpoint: Endpoint) {
-        if endpoint == .DemoSSE, let data = LocalData.SSE.data(using: .utf8)  {
-            subject.send(data)
-        }
+    private let endPoint: EndPoint
+    
+    init(_ endPoint: EndPoint) {
+        self.endPoint = endPoint
     }
     
     func receive<S>(subscriber: S) where S : Subscriber, Error == S.Failure, Data == S.Input {
         subject.receive(subscriber: subscriber)
+        if endPoint == .DemoSSE, let data = LocalData.SSE.data(using: .utf8)  {
+            subject.send(data)
+        }
     }
     
 }

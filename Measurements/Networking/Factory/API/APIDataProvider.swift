@@ -22,9 +22,9 @@ class APIDataProvider: NSObject {
         URLSession(configuration: .default, delegate: self, delegateQueue: operationQueue)
     }()
 
-    init(_ endpoint: Endpoint) {
+    init(_ endPoint: EndPoint) {
         super.init()
-        guard let url = URL.from(endpoint) else {
+        guard let url = URL.from(endPoint) else {
             subject.send(completion: .failure(URLError(.badURL)))
             return
         }

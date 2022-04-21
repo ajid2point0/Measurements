@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		80107A4C28037CA70085DE65 /* MeasurementObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A4B28037CA70085DE65 /* MeasurementObject.swift */; };
 		80107A50280384750085DE65 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A4F280384750085DE65 /* Extensions.swift */; };
-		80107A522803849B0085DE65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A512803849B0085DE65 /* Endpoint.swift */; };
+		80107A522803849B0085DE65 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80107A512803849B0085DE65 /* EndPoint.swift */; };
 		80418E79280D2B2600EFC4C6 /* EventParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80418E78280D2B2600EFC4C6 /* EventParser.swift */; };
 		80418E7E280D2BA200EFC4C6 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80418E7D280D2BA200EFC4C6 /* DataFactory.swift */; };
 		80418E81280D2BD300EFC4C6 /* APIDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80418E80280D2BD300EFC4C6 /* APIDataFactory.swift */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		80107A4B28037CA70085DE65 /* MeasurementObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementObject.swift; sourceTree = "<group>"; };
 		80107A4F280384750085DE65 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		80107A512803849B0085DE65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		80107A512803849B0085DE65 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		8019A8C0280355AF0062660C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		80418E78280D2B2600EFC4C6 /* EventParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventParser.swift; sourceTree = "<group>"; };
 		80418E7D280D2BA200EFC4C6 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				80418E7C280D2B8700EFC4C6 /* Factory */,
-				80107A512803849B0085DE65 /* Endpoint.swift */,
+				80107A512803849B0085DE65 /* EndPoint.swift */,
 				80418E78280D2B2600EFC4C6 /* EventParser.swift */,
 			);
 			path = Networking;
@@ -315,7 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80107A522803849B0085DE65 /* Endpoint.swift in Sources */,
+				80107A522803849B0085DE65 /* EndPoint.swift in Sources */,
 				80A1798F2806BC9300F6B935 /* MeasurementsRow.swift in Sources */,
 				80107A4C28037CA70085DE65 /* MeasurementObject.swift in Sources */,
 				807D91B3280034F8003A7458 /* ContentView.swift in Sources */,
