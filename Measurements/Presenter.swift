@@ -52,6 +52,9 @@ extension Presenter {
     }
     
     private func updateItemList(with values: [MeasurementObject]) {
-        measurementList.insert(contentsOf: values, at: 0)
+        let filtredValues = values.filter {
+            !$0.measurements.isEmpty
+        }
+        measurementList.insert(contentsOf: filtredValues, at: 0)
     }
 }
