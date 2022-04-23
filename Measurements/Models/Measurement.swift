@@ -12,7 +12,7 @@ struct Coordinate: Decodable {
     let longitude: Double
 }
 
-struct Measurement: Decodable, Identifiable {
+struct Measurement: Identifiable {
     let id: String
     let timeStamp: Int
     let value: MeasurementValue
@@ -28,12 +28,13 @@ struct Measurement: Decodable, Identifiable {
         case Tuple(Double, Double)
     }
 }
-extension Measurement {
+
+extension Measurement: Decodable {
     
-    init(timeStamp: Int, value: MeasurementValue) {
-        self.timeStamp = timeStamp
-        self.value = value
-        self.id = String(timeStamp)
+    init() {
+        id = UUID().uuidString
+        timeStamp = 1234567
+        self.value = .SingleValue("value")
     }
     
     init(from decoder: Decoder) throws {

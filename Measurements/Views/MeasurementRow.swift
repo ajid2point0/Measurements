@@ -35,7 +35,7 @@ struct MeasurementRow: View {
 
 struct MeasurementRow_Previews: PreviewProvider {
     static var previews: some View {
-        MeasurementRow(measurementValue: Measurement(timeStamp: 1234567, value: .SingleValue("measurement1")), unit: "m")
+        MeasurementRow(measurementValue: Measurement(), unit: "m")
             .previewLayout(.sizeThatFits)
     }
 }
